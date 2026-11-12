@@ -1,7 +1,7 @@
 <!DOCTYPE html> <html lang=en> <head><script>
 (function(){
   var SITES = {"看看鸭": "https://www.kankanya.me", "注视影视": "https://gaze.red", "NO视频": "https://www.novipnoad.uk", "西瓜影院": "https://www.bzzdyy.com", "LIBVIO": "https://www.libvio.io", "厂长资源": "https://www.cz4k.com", "爱壹帆": "https://iyf.tv", "SOTVLA": "https://www.sotvla.cc", "酷影聚": "https://kyj1.cc", "洛雪TV": "https://tv.lxyy.club", "小唐短剧": "https://bikamanhuaapp.com", "番茄酱影视": "https://fanqe.cc", "茶杯虎": "https://cuptgr.com", "宅男影视": "https://zndy.top", "4k影视": "https://www.4kvm.top", "开心影院": "https://www.kxyy1.cc", "热播之家": "https://www.rebozj.cc", "豆花电影网": "https://dhvideo.cc", "毒舌影视": "https://www.dushe3.app", "歪比巴卜": "https://wbbb1.com", "追影": "https://zhuiying3.cc", "找剧AI": "https://zhaoju1.com", "AnyShort": "https://anyshort.net", "嘀嗒影视": "https://www.didahd.xyz", "绿色影视": "https://lsysw.top", "爱电影": "https://y2s52n7.com", "拾光影视": "https://tv.time1080.xyz", "SA视频": "https://safilm69.com", "西瓜影视": "https://jsntdl.com/xgdetail/151879.html", "剧踪电影网": "https://www.juzong01.me", "小唐视频": "https://xiaotie8.com", "千千影视": "https://www.qqys01.com", "硬核指南": "https://yinghezhinan.com"};
-  var I18N = {"Overall uptime": "总体可用率", "Average response time": "平均响应时间", "Up": "正常", "Down": "故障", "Online": "在线", "Offline": "离线", "Status": "状态", "Past 90 days": "近90天", "Past 24 hours": "近24小时", "All systems operational": "所有系统正常运行", "Subscribe": "订阅", "Powered by": "技术支持", "was": "于", "minutes ago": "分钟前", "hours ago": "小时前", "days ago": "天前", "just now": "刚刚"};
+  var I18N = {"Overall uptime": "总体可用率", "Average response time": "平均响应时间", "Up": "正常", "Down": "故障", "Online": "在线", "Offline": "离线", "Status": "状态", "Past 90 days": "近90天", "Past 24 hours": "近24小时", "All systems operational": "所有系统正常运行", "Subscribe": "订阅", "Powered by": "技术支持"};
 
   function translateText(){
     var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
@@ -10,13 +10,10 @@
       var t = node.textContent;
       if(!t || !t.trim()) continue;
       for(var en in I18N){
-        if(t.indexOf(en) !== -1){
-          node.textContent = t.split(en).join(I18N[en]);
-        }
+        if(t.indexOf(en) !== -1){ node.textContent = t.split(en).join(I18N[en]); }
       }
     }
   }
-
   function linkify(){
     var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     var node;
@@ -26,26 +23,15 @@
       var p = node.parentElement;
       if(!p || p.closest('a') || p.tagName==='SCRIPT' || p.tagName==='STYLE') continue;
       var a = document.createElement('a');
-      a.href = SITES[t];
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.style.color = 'inherit';
-      a.style.textDecoration = 'none';
-      a.style.cursor = 'pointer';
-      a.textContent = t;
-      p.replaceChild(a, node);
+      a.href = SITES[t]; a.target = '_blank'; a.rel = 'noopener';
+      a.style.color = 'inherit'; a.style.textDecoration = 'none'; a.style.cursor = 'pointer';
+      a.textContent = t; p.replaceChild(a, node);
     }
   }
-
   function process(){ translateText(); linkify(); }
-
   var mo = new MutationObserver(function(){ process(); });
-  function start(){
-    mo.observe(document.body, {childList:true, subtree:true});
-    process();
-  }
+  function start(){ mo.observe(document.body, {childList:true, subtree:true}); process(); }
 
-  if(sessionStorage.getItem('authed')==='1'){ start(); return; }
   function showGate(){
     var g=document.createElement('div');
     g.id='__gate__';
@@ -71,7 +57,6 @@
       var bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt:salt,iterations:100000,hash:'SHA-256'},km,256);
       var hash=btoa(String.fromCharCode(...new Uint8Array(bits)));
       if(hash==='T66hslhYzr0ySI32ygw9zzDk1V5Y3/jSdSrcKCNE1q8='){
-        sessionStorage.setItem('authed','1');
         g.remove();
         document.body.style.overflow='';
         start();
