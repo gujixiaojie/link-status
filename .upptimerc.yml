@@ -3,25 +3,81 @@ owner: gujixiaojie # Your GitHub organization or username, where this repository
 repo: link-status # The name of this repository
 
 sites:
-  - name: Baidu
-    url: https://www.baidu.com
-  - name: Bilibili
-    url: https://www.bilibili.com
-  - name: GitHub
-    url: https://github.com
+  - name: 看看鸭
+    url: https://www.kankanya.me
+  - name: 注视影视
+    url: https://gaze.red
+  - name: NO视频
+    url: https://www.novipnoad.uk
+  - name: 西瓜影院
+    url: https://www.bzzdyy.com
+  - name: LIBVIO
+    url: https://www.libvio.io
+  - name: 厂长资源
+    url: https://www.cz4k.com
+  - name: 爱壹帆
+    url: https://iyf.tv
+  - name: SOTVLA
+    url: https://www.sotvla.cc
+  - name: 酷影聚
+    url: https://kyj1.cc
+  - name: 洛雪TV
+    url: https://tv.lxyy.club
+  - name: 小唐短剧
+    url: https://bikamanhuaapp.com
+  - name: 番茄酱影视
+    url: https://fanqe.cc
+  - name: 茶杯虎
+    url: https://cuptgr.com
+  - name: 宅男影视
+    url: https://zndy.top
+  - name: 4k影视
+    url: https://www.4kvm.top
+  - name: 开心影院
+    url: https://www.kxyy1.cc
+  - name: 热播之家
+    url: https://www.rebozj.cc
+  - name: 豆花电影网
+    url: https://dhvideo.cc
+  - name: 毒舌影视
+    url: https://www.dushe3.app
+  - name: 歪比巴卜
+    url: https://wbbb1.com
+  - name: 追影
+    url: https://zhuiying3.cc
+  - name: 找剧AI
+    url: https://zhaoju1.com
+  - name: AnyShort
+    url: https://anyshort.net
+  - name: 嘀嗒影视
+    url: https://www.didahd.xyz
+  - name: 绿色影视
+    url: https://lsysw.top
+  - name: 爱电影
+    url: https://y2s52n7.com
+  - name: 拾光影视
+    url: https://tv.time1080.xyz
+  - name: SA视频
+    url: https://safilm69.com
+  - name: 西瓜影视
+    url: https://jsntdl.com/xgdetail/151879.html
+  - name: 剧踪电影网
+    url: https://www.juzong01.me
+  - name: 小唐视频
+    url: https://xiaotie8.com
+  - name: 千千影视
+    url: https://www.qqys01.com
+  - name: 硬核指南
+    url: https://yinghezhinan.com
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  # cname: demo.upptime.js.org
   baseUrl: /link-status
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Link Status
-  introTitle: "**Link Status** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This status page monitors the availability of my favorite sites, powered by GitHub Actions and Upptime.
+  introTitle: "**Link Status** 追剧网站可用性监控"
+  introMessage: 每8小时自动探测一次，站点掉线自动提醒。
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-# trigger setup
