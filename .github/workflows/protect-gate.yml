@@ -1,0 +1,33 @@
+name: Protect Password Gate
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  protect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inject password gate
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          pip install requests -q
+          echo "PHNjcmlwdD4KKGZ1bmN0aW9uKCl7CiAgaWYgKHNlc3Npb25TdG9yYWdlLmdldEl0ZW0oJ2F1dGhlZCcpPT09JzEnKSByZXR1cm47CiAgZnVuY3Rpb24gc2hvd0dhdGUoKXsKICAgIHZhciBnPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpOwogICAgZy5pZD0nX19nYXRlX18nOwogICAgZy5zdHlsZS5jc3NUZXh0PSdwb3NpdGlvbjpmaXhlZDtpbnNldDowO3otaW5kZXg6OTk5OTk7YmFja2dyb3VuZDojZjVmNmY4O2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OmNlbnRlcjtmb250LWZhbWlseTotYXBwbGUtc3lzdGVtLEJsaW5rTWFjU3lzdGVtRm9udCxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZjsnOwogICAgZy5pbm5lckhUTUw9JzxkaXYgc3R5bGU9ImJhY2tncm91bmQ6I2ZmZjtwYWRkaW5nOjMycHg7Ym9yZGVyLXJhZGl1czoxMnB4O2JveC1zaGFkb3c6MCA0cHggMjRweCByZ2JhKDAsMCwwLC4xKTt3aWR0aDozMjBweDsiPicKICAgICAgKyc8aDIgc3R5bGU9Im1hcmdpbjowIDAgOHB4O2ZvbnQtc2l6ZToyMHB4O2NvbG9yOiMzMzM7Ij5cdXsxRjUxMn0gXHU1M0Q3XHU5NjUwXHU4QkJGXHU5NUVFPC9oMj4nCiAgICAgICsnPHAgc3R5bGU9Im1hcmdpbjowIDAgMjBweDtmb250LXNpemU6MTNweDtjb2xvcjojODg4OyI+XHU4QkY3XHU4RjkzXHU1MTY1XHU4QkJGXHU5NUVFXHU1QkM2XHU3ODAxPC9wPicKICAgICAgKyc8aW5wdXQgaWQ9Il9fcHdfXyIgdHlwZT0icGFzc3dvcmQiIHBsYWNlaG9sZGVyPSJcdTVCQzZcdTc4MDEiIHN0eWxlPSJ3aWR0aDoxMDAlO3BhZGRpbmc6MTBweCAxMnB4O2JvcmRlcjoxcHggc29saWQgI2RkZDtib3JkZXItcmFkaXVzOjhweDtmb250LXNpemU6MTVweDtib3gtc2l6aW5nOmJvcmRlci1ib3g7b3V0bGluZTpub25lOyIgLz4nCiAgICAgICsnPHAgaWQ9Il9fZXJyX18iIHN0eWxlPSJjb2xvcjojZTUzZTNlO2ZvbnQtc2l6ZToxM3B4O21hcmdpbjo4cHggMCAwO2Rpc3BsYXk6bm9uZTsiPlx1NUJDNlx1NzgwMVx1OTUxOVx1OEJFRjwvcD4nCiAgICAgICsnPGJ1dHRvbiBpZD0iX19idG5fXyIgc3R5bGU9IndpZHRoOjEwMCU7bWFyZ2luLXRvcDoxNnB4O3BhZGRpbmc6MTBweDtiYWNrZ3JvdW5kOiMzYjgyZjY7Y29sb3I6I2ZmZjtib3JkZXI6bm9uZTtib3JkZXItcmFkaXVzOjhweDtmb250LXNpemU6MTVweDtjdXJzb3I6cG9pbnRlcjsiPlx1OEZEQlx1NTE2NTwvYnV0dG9uPicKICAgICAgKyc8L2Rpdj4nOwogICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChnKTsKICAgIGRvY3VtZW50LmJvZHkuc3R5bGUub3ZlcmZsb3c9J2hpZGRlbic7CiAgICB2YXIgaW5wdXQ9ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fcHdfXycpOwogICAgdmFyIGJ0bj1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19idG5fXycpOwogICAgdmFyIGVycj1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19lcnJfXycpOwogICAgaW5wdXQuZm9jdXMoKTsKICAgIGFzeW5jIGZ1bmN0aW9uIGNoZWNrKCl7CiAgICAgIHZhciBwdz1pbnB1dC52YWx1ZTsKICAgICAgdmFyIGVuYz1uZXcgVGV4dEVuY29kZXIoKTsKICAgICAgdmFyIGttPWF3YWl0IGNyeXB0by5zdWJ0bGUuaW1wb3J0S2V5KCdyYXcnLGVuYy5lbmNvZGUocHcpLHtuYW1lOidQQktERjInfSxmYWxzZSxbJ2Rlcml2ZUJpdHMnXSk7CiAgICAgIHZhciBzYWx0PVVpbnQ4QXJyYXkuZnJvbShhdG9iKCd4L2NZMS9iQWtLS1RKYU9YVENoTW1RPT0nKSxjPT5jLmNoYXJDb2RlQXQoMCkpOwogICAgICB2YXIgYml0cz1hd2FpdCBjcnlwdG8uc3VidGxlLmRlcml2ZUJpdHMoe25hbWU6J1BCS0RGMicsc2FsdDpzYWx0LGl0ZXJhdGlvbnM6MTAwMDAwLGhhc2g6J1NIQS0yNTYnfSxrbSwyNTYpOwogICAgICB2YXIgaGFzaD1idG9hKFN0cmluZy5mcm9tQ2hhckNvZGUoLi4ubmV3IFVpbnQ4QXJyYXkoYml0cykpKTsKICAgICAgaWYoaGFzaD09PSdUNjZoc2xoWXpyMHlTSTMyeWd3OXp6RGsxVjVZMy9qU2RTcmNLQ05FMXE4PScpewogICAgICAgIHNlc3Npb25TdG9yYWdlLnNldEl0ZW0oJ2F1dGhlZCcsJzEnKTsKICAgICAgICBnLnJlbW92ZSgpOwogICAgICAgIGRvY3VtZW50LmJvZHkuc3R5bGUub3ZlcmZsb3c9Jyc7CiAgICAgIH1lbHNlewogICAgICAgIGVyci5zdHlsZS5kaXNwbGF5PSdibG9jayc7CiAgICAgICAgaW5wdXQudmFsdWU9Jyc7CiAgICAgICAgaW5wdXQuZm9jdXMoKTsKICAgICAgfQogICAgfQogICAgYnRuLm9uY2xpY2s9Y2hlY2s7CiAgICBpbnB1dC5vbmtleWRvd249ZnVuY3Rpb24oZSl7aWYoZS5rZXk9PT0nRW50ZXInKWNoZWNrKCk7fTsKICB9CiAgaWYoZG9jdW1lbnQucmVhZHlTdGF0ZT09PSdsb2FkaW5nJykgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsc2hvd0dhdGUpOwogIGVsc2Ugc2hvd0dhdGUoKTsKfSkoKTsKPC9zY3JpcHQ+Cg==" | base64 -d > /tmp/gate.html
+          python3 << 'SCRIPT'
+          import requests, base64, re, os
+          REPO = "gujixiaojie/link-status"
+          TOKEN = os.environ["GH_TOKEN"]
+          h = {"Authorization": f"Bearer {TOKEN}", "Accept": "application/vnd.github+json"}
+          r = requests.get(f"https://api.github.com/repos/{REPO}/contents/index.html?ref=gh-pages", headers=h)
+          j = r.json()
+          html = base64.b64decode(j["content"]).decode()
+          if "__gate__" in html:
+              print("Gate already present, skip.")
+              exit(0)
+          gate = open("/tmp/gate.html").read()
+          html2 = re.sub(r'<head[^>]*>', lambda m: m.group(0) + gate, html, count=1)
+          payload = {"message": "Re-inject password gate", "content": base64.b64encode(html2.encode()).decode(), "sha": j["sha"]}
+          r2 = requests.put(f"https://api.github.com/repos/{REPO}/contents/index.html?ref=gh-pages", headers=h, json=payload)
+          print("Injected:", r2.status_code)
+          SCRIPT
