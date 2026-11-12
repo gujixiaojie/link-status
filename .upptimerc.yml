@@ -75,7 +75,7 @@ status-website:
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Link Status
   introTitle: "**Link Status** 追剧网站可用性监控"
-  introMessage: 每8小时自动探测一次，站点掉线自动提醒。
+  introMessage: 每4小时自动探测一次，站点掉线自动提醒。
   navbar:
     - title: Status
       href: /
