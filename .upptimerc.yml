@@ -1,4 +1,3 @@
-# Change these first
 owner: gujixiaojie
 repo: link-status
 
@@ -43,28 +42,14 @@ sites:
     url: https://nnyy.la
   - name: 多多影视
     url: https://323433ssdfd.top
-  - name: 开心影院
-    url: https://www.kxyy1.cc
-  - name: 嘀嗒影视
-    url: https://www.didahd.xyz
   - name: 奇点影视
     url: https://qidianyingshi.net
   - name: VIP兔
     url: https://www.viptu.com
-  - name: 小唐视频
-    url: https://xiaotie8.com
-  - name: 拾光影视
-    url: https://tv.time1080.xyz
   - name: 低端影视
     url: https://ddys.io
-  - name: SA视频
-    url: https://www.lsjys11.com
-  - name: 千千影视
-    url: https://www.qqys01.com
   - name: 蜻蜓电影
     url: https://www.qtdy11.com
-  - name: 洛雪TV
-    url: https://tv.lxyy.club
   - name: 爱追剧影视
     url: https://www.azj66.com
   - name: HDmoli
@@ -75,7 +60,7 @@ sites:
     url: https://www.mtyy2.cc
   - name: 好好看
     url: https://www.hhkan1.com
-  - name: Destiny TV
+  - name: Destiny-TV
     url: https://www.tvfans.top
   - name: 猩球影院
     url: https://gorilla-flix.com
@@ -93,8 +78,6 @@ sites:
     url: https://www.66dpw.vip
   - name: 555电影
     url: https://5k40.top
-  - name: 大米星球
-    url: https://dmxq25.com
   - name: 懂片帝AI
     url: https://dongpian1.com
   - name: 光速影视
@@ -103,10 +86,10 @@ sites:
     url: https://dnvod.org
   - name: 蓝光影院
     url: https://www.touhaos.cc
-  - name: 宅男影视
-    url: https://zndy.top
   - name: 路飞影视
     url: https://www.lufys.com
+  - name: 大米星球
+    url: https://dmxq25.com
   - name: 4K在线
     url: https://www.bbibi.cc
   - name: 网飞猫
@@ -114,7 +97,7 @@ sites:
   - name: 糖豆影视
     url: https://www.tdys.cc
   - name: 鱼塘社影视
-    url: https://tv.yutangshe.com
+    url: https://tv.
   - name: 飞快TV
     url: https://feikuai.in
   - name: 爱奇艺
@@ -145,20 +128,14 @@ sites:
     url: https://hkys2.cc
   - name: 两个BT影视
     url: https://www.bttwo.org
-  - name: 厂长资源
-    url: https://www.4kcz.com
   - name: NO视频
     url: https://www.novipnoad.net
-  - name: HDmoli
-    url: https://www.hdmoli.com
   - name: 樱花影院
     url: https://www.dcjyb.com
   - name: 蘑菇影视
     url: https://www.5o5k.com
   - name: 抖音
     url: https://www.douyin.com/vs
-  - name: 热播之家
-    url: https://www.rebozj.cc
   - name: LIBVIO
     url: https://www.libvio.pw
   - name: 低调影视
@@ -177,24 +154,26 @@ sites:
     url: https://safilm69.com
   - name: 剧踪电影网
     url: https://juzong.vip
+  - name: 小唐视频
+    url: https://xiaotie8.com
+  - name: 拾光影视
+    url: https://tv.time1080.xyz
+  - name: 千千影视
+    url: https://www.qqys01.com
   - name: 绿色影视
     url: https://lsysw.top
   - name: AnyShort
     url: https://anyshort.net/zh-Hant
   - name: 找剧AI
     url: https://zhaoju1.com
-  - name: 追影
-    url: https://zhuiying3.cc
-  - name: 歪比巴卜
-    url: https://wbbb1.com
   - name: 毒舌电影
     url: https://www.dushe3.app
-  - name: 豆花电影网
-    url: https://dhvideo.cc
-  - name: 酷影聚
-    url: https://kyj1.cc
+  - name: 热播之家
+    url: https://www.rebozj.cc
   - name: 4k影视
     url: https://www.4kvm.top
+  - name: 宅男影视
+    url: https://zndy.top
   - name: 茶杯虎
     url: https://cuptgr.com
   - name: 番茄酱影视
@@ -203,6 +182,8 @@ sites:
     url: https://bikamanhuaapp.com
   - name: 硬核指南
     url: https://yinghezhinan.com
+  - name: 酷影聚
+    url: https://kyj1.cc
   - name: SOTVLA
     url: https://www.sotvla.cc
   - name: 厂长资源
@@ -215,16 +196,18 @@ sites:
     url: https://www.novipnoad.uk
   - name: 注视影视
     url: https://gaze.red
-  - name: 看看鸭
-    url: https://www.kankanya.me
   - name: 奈菲影视
     url: https://www.nfyingshi.com
   - name: 大米星球
     url: https://dmxq.fun
+  - name: HDmoli
+    url: https://www.hdmoli.com
   - name: 雪糕TV
     url: https://www.xgitv.com
-  - name: News Today
+  - name: News-Today
     url: https://vafvafnotif.com/static/wall.html
+  - name: 厂长资源
+    url: https://www.4kcz.com
   - name: 努努影院
     url: https://nnyy.in
   - name: 纪录天堂
@@ -233,7 +216,7 @@ sites:
     url: https://ilovedocu.com
   - name: 纪录片仓库
     url: https://jilulib.com
-  - name: 纪录片 - 哔哩哔哩
+  - name: 哔哩哔哩纪录片
     url: https://www.bilibili.com/documentary
   - name: 央视片库
     url: https://tv.cctv.com/yxg/index.shtml
@@ -253,7 +236,7 @@ sites:
     url: https://v.cctv.com
   - name: 哔哩哔哩
     url: https://www.bilibili.com
-  - name: 好看视频--轻松有收获
+  - name: 好看视频
     url: https://haokan.baidu.com
   - name: 芒果TV
     url: https://www.mgtv.com
@@ -289,10 +272,52 @@ sites:
     url: https://www.ymvid.com
   - name: 酷影聚
     url: https://feikuju.com
-  - name: 极速追剧
-    url: https://jisuzhuiju.com
   - name: 全民解析
     url: https://www.quanminjiexi.com
+  - name: 追剧么
+    url: https://www.zhuijume.com/index.php/vod/type/id/1.html
+  - name: 看剧AI
+    url: https://kanju.ai
+  - name: 看看鸭
+    url: https://www.kankanya.me
+  - name: 洛雪TV
+    url: https://tv.lxyy.club
+  - name: PPnix
+    url: https://www.ppnix.com/cn
+  - name: 可可影视
+    url: https://www.kkys14.com
+  - name: ZIP0
+    url: https://zip0.com
+  - name: 剧踪电影网
+    url: https://www.juzong01.me
+  - name: 极速追剧
+    url: https://jisuzhuiju.com
+  - name: 片库
+    url: https://4k01.pianku.online
+  - name: 66大片网
+    url: https://www.77dpw.vip
+  - name: 嘀嗒影视
+    url: https://www.didahd.xyz
+  - name: 追影
+    url: https://zhuiying3.cc
+  - name: 歪比巴卜
+    url: https://wbbb1.com
+  - name: 开心影院
+    url: https://www.kxyy1.cc
+  - name: 豆花电影网
+    url: https://dhvideo.cc
+  - name: SA视频
+    url: https://www.lsjys11.com
+  - name: 91毒舌电影
+    url: https://www.duse0.com
+  - name: Auete影视网
+    url: https://www.aeete.com
+  - name: APP影院
+    url: https://www.appmovie.art
+  - name: 来福吧
+    url: https://laifu8.com
+  - name: 奈飞工厂
+    url: https://www.netflixgc.com
 
 status-website:
   baseUrl: /link-status
