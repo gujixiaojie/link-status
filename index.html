@@ -1,4 +1,76 @@
-<!DOCTYPE html> <html lang=en> <head> <meta charset=utf-8> <meta content="width=device-width,initial-scale=1" name=viewport> <meta content=#333333 name=theme-color> <base href=/link-status/ > <link href=manifest.json rel=manifest crossorigin=use-credentials> <script>__SAPPER__={baseUrl:"/link-status",preloaded:[void 0,{}]};if('serviceWorker' in navigator)navigator.serviceWorker.register('/link-status/service-worker.js');(function(){try{eval("async function x(){}");var main="/link-status/client/client.eff757f8.js"}catch(e){main="/link-status/client/legacy/client.453cab80.js"};var s=document.createElement("script");try{new Function("if(0)import('')")();s.src=main;s.type="module";s.crossOrigin="use-credentials";}catch(e){s.src="/link-status/client/shimport@2.0.5.js";s.setAttribute("data-main",main);}document.head.appendChild(s);}());</script> <link href=client/client-31a52aa5.css rel=stylesheet><link href=client/createOctokit-a85f76c7.css rel=stylesheet><link href=client/index-b0b6455a.css rel=stylesheet> <title>Link Status</title> <script>// If `prefers-color-scheme` is not supported, fall back to light mode.
+<!DOCTYPE html> <html lang=en> <head><script>
+(function(){
+  var SITES = {"饭搭子影视": "https://fdzys.com", "七味网": "https://www.qwmkv.com", "茶杯狐": "https://cupfox.love", "央视网直播大全": "https://tv.cctv.com/live", "七七影院": "https://www.qiqi89.com", "影猫の仓库": "https://www.ymck.pro", "追剧达人": "https://www.npjtjx.cn", "可可影视": "https://www.kkys1.com", "西瓜影音": "https://www.siren93.com", "美剧窝": "https://www.mjwo.net", "飞流视频": "https://www.flixflop.com", "囧次元": "https://www.jciyuan.com", "爱电影": "https://y2s52n7.com", "八号影视": "https://www.bahaotv.com", "12光影": "https://12gy.com", "Wow影院": "https://dy.wow2fun.com", "枝枝影视": "https://www.zzoc.cc", "多乐影院": "https://www.drys.top", "努努影院": "https://nnyy.in", "多多影视": "https://323433ssdfd.top", "开心影院": "https://www.kxyy1.cc", "嘀嗒影视": "https://www.didahd.xyz", "奇点影视": "https://qidianyingshi.net", "VIP兔": "https://www.viptu.com", "小唐视频": "https://xiaotie8.com", "拾光影视": "https://tv.time1080.xyz", "低端影视": "https://ddys.io", "SA视频": "https://safilm69.com", "千千影视": "https://www.qqys01.com", "蜻蜓电影": "https://www.qtdy11.com", "洛雪TV": "https://tv.lxyy.club", "爱追剧影视": "https://www.azj66.com", "HDmoli": "https://www.hdmoli.com", "琪琪影院": "https://www.szxwwj.com", "麦田影院": "https://www.mtyy2.cc", "好好看": "https://www.hhkan1.com", "Destiny TV": "https://www.tvfans.top", "猩球影院": "https://gorilla-flix.com", "在线之家": "https://www.zxzj.run", "FreeOK": "https://www.freeokk.pro", "共青春": "https://gqc.ink", "欧乐影院": "https://www.oleol.com", "蘑菇影视": "https://www.5o5k.com", "66大片网": "https://www.66dpw.vip", "555电影": "https://5k40.top", "大米星球": "https://dmxq.fun", "懂片帝AI": "https://dongpian1.com", "光速影视": "https://yingshiso.link", "多瑙影院": "https://dnvod.org", "蓝光影院": "https://www.touhaos.cc", "宅男影视": "https://zndy.top", "路飞影视": "https://www.lufys.com", "4K在线": "https://www.bbibi.cc", "网飞猫": "https://www.ncat22.com", "糖豆影视": "https://www.tdys.cc", "鱼塘社影视": "https://tv.yutangshe.com", "飞快TV": "https://feikuai.in", "爱奇艺": "https://www.iqiyi.com", "腾讯视频": "https://v.qq.com", "优酷": "https://www.youku.com", "PPTV": "https://www.pptv.com", "乐视视频": "https://www.le.com", "搜狐视频": "https://tv.sohu.com", "360影视": "https://www.360kan.com", "风行": "https://www.fun.tv", "华数TV": "https://www.wasu.cn", "柠檬视频": "https://nmsp8.cc", "56视频": "https://www.56.com", "人人影视": "https://www.renren.pro", "好看影视": "https://hkys2.cc", "两个BT影视": "https://www.bttwo.org", "厂长资源": "https://www.cz4k.com", "NO视频": "https://www.novipnoad.uk", "樱花影院": "https://www.dcjyb.com", "抖音": "https://www.douyin.com/vs", "热播之家": "https://www.rebozj.cc", "LIBVIO": "https://www.libvio.io", "低调影视": "https://ddys.app", "多多追剧": "https://duoduozhuiju.com", "注视影视": "https://gaze.red", "看片狂人": "https://www.kpkuang.fun", "西瓜影院": "https://www.bzzdyy.com", "剧踪电影网": "https://juzong.vip", "绿色影视": "https://lsysw.top", "AnyShort": "https://anyshort.net/zh-Hant", "找剧AI": "https://zhaoju1.com", "追影": "https://zhuiying3.cc", "歪比巴卜": "https://wbbb1.com", "毒舌电影": "https://www.dushe3.app", "豆花电影网": "https://dhvideo.cc", "酷影聚": "https://feikuju.com", "4k影视": "https://www.4kvm.top", "茶杯虎": "https://cuptgr.com", "番茄酱影视": "https://fanqe.cc", "小唐短剧": "https://bikamanhuaapp.com", "硬核指南": "https://yinghezhinan.com", "SOTVLA": "https://www.sotvla.cc", "看看鸭": "https://www.kankanya.me", "奈菲影视": "https://www.nfyingshi.com", "雪糕TV": "https://www.xgitv.com", "News Today": "https://vafvafnotif.com/static/wall.html", "纪录天堂": "https://www.ummua.com", "我爱纪录片": "https://ilovedocu.com", "纪录片仓库": "https://jilulib.com", "纪录片 - 哔哩哔哩": "https://www.bilibili.com/documentary", "央视片库": "https://tv.cctv.com/yxg/index.shtml", "追新番": "https://www.fanxinzhui.com", "LiTV立視": "https://www.litv.tv", "大木屋": "https://www.damuwu.com", "芒果TV": "https://www.mgtv.com", "电视眼": "https://www.tvyan.com", "AcFun": "https://www.acfun.cn", "央视网视频": "https://v.cctv.com", "哔哩哔哩": "https://www.bilibili.com", "好看视频--轻松有收获": "https://haokan.baidu.com", "追剧吧": "https://www.zhuiju8.cc", "xb1电影": "https://www.xb1.com", "壹秀影视": "https://www.yixiuwang.com", "鸭鸭资源网": "https://yayazy.org", "u酷资源站": "https://ukuzy2.com", "快车资源网": "https://kuaichezy.com", "闪电资源网": "https://shandianzy.com", "无尽资源采集": "https://wujinzy.cc", "红牛资源": "https://www.hongniuziyuan.tv", "麒麟资源站": "https://www.qilinzyz.com", "冰豆云播": "https://www.bingdou.vip", "兔子VIP视频解析站": "https://htuzi.com/vip", "魔法影视": "https://movie.mofaxi.cn", "SeeNav全网VIP视频解析": "https://movie.seenav.cn", "粤漫之家": "https://www.ymvid.com", "极速追剧": "https://jisuzhuiju.com", "全民解析": "https://www.quanminjiexi.com"};
+  var I18N = {"Overall uptime": "总体可用率", "Average response time": "平均响应时间", "Up": "正常", "Down": "故障", "Online": "在线", "Offline": "离线", "Status": "状态", "Past 90 days": "近90天", "Past 24 hours": "近24小时", "All systems operational": "所有系统正常运行", "Subscribe": "订阅", "Powered by": "技术支持", "Active Incidents": "活跃事件"};
+  function translateText(){
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while(node = walker.nextNode()){
+      var t = node.textContent;
+      if(!t || !t.trim()) continue;
+      for(var en in I18N){
+        if(t.indexOf(en) !== -1){ node.textContent = t.split(en).join(I18N[en]); }
+      }
+    }
+  }
+  function linkify(){
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while(node = walker.nextNode()){
+      var t = node.textContent.trim();
+      if(!t || !SITES[t]) continue;
+      var p = node.parentElement;
+      if(!p || p.closest('a') || p.tagName==='SCRIPT' || p.tagName==='STYLE') continue;
+      var a = document.createElement('a');
+      a.href = SITES[t]; a.target = '_blank'; a.rel = 'noopener';
+      a.style.color = 'inherit'; a.style.textDecoration = 'none'; a.style.cursor = 'pointer';
+      a.textContent = t; p.replaceChild(a, node);
+    }
+  }
+  function process(){ translateText(); linkify(); }
+  var mo = new MutationObserver(function(){ process(); });
+  function start(){ mo.observe(document.body, {childList:true, subtree:true}); process(); }
+  function showGate(){
+    var g=document.createElement('div');
+    g.id='__gate__';
+    g.style.cssText='position:fixed;inset:0;z-index:99999;background:#f5f6f8;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;';
+    g.innerHTML='<div style="background:#fff;padding:32px;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,.1);width:320px;">'
+      +'<h2 style="margin:0 0 8px;font-size:20px;color:#333;">\u{1F512} \u53D7\u9650\u8BBF\u95EE</h2>'
+      +'<p style="margin:0 0 20px;font-size:13px;color:#888;">\u8BF7\u8F93\u5165\u8BBF\u95EE\u5BC6\u7801</p>'
+      +'<input id="__pw__" type="password" placeholder="\u5BC6\u7801" style="width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:15px;box-sizing:border-box;outline:none;" />'
+      +'<p id="__err__" style="color:#e53e3e;font-size:13px;margin:8px 0 0;display:none;">\u5BC6\u7801\u9519\u8BEF</p>'
+      +'<button id="__btn__" style="width:100%;margin-top:16px;padding:10px;background:#3b82f6;color:#fff;border:none;border-radius:8px;font-size:15px;cursor:pointer;">\u8FDB\u5165</button>'
+      +'</div>';
+    document.body.appendChild(g);
+    document.body.style.overflow='hidden';
+    var input=document.getElementById('__pw__');
+    var btn=document.getElementById('__btn__');
+    var err=document.getElementById('__err__');
+    input.focus();
+    async function check(){
+      var pw=input.value;
+      var enc=new TextEncoder();
+      var km=await crypto.subtle.importKey('raw',enc.encode(pw),{name:'PBKDF2'},false,['deriveBits']);
+      var salt=Uint8Array.from(atob('x/cY1/bAkKKTJaOXTChMmQ=='),c=>c.charCodeAt(0));
+      var bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt:salt,iterations:100000,hash:'SHA-256'},km,256);
+      var hash=btoa(String.fromCharCode(...new Uint8Array(bits)));
+      if(hash==='T66hslhYzr0ySI32ygw9zzDk1V5Y3/jSdSrcKCNE1q8='){
+        g.remove();
+        document.body.style.overflow='';
+        start();
+      }else{
+        err.style.display='block';
+        input.value='';
+        input.focus();
+      }
+    }
+    btn.onclick=check;
+    input.onkeydown=function(e){if(e.key==='Enter')check();};
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',showGate);
+  else showGate();
+})();
+</script> <meta charset=utf-8> <meta content="width=device-width,initial-scale=1" name=viewport> <meta content=#333333 name=theme-color> <base href=/link-status/ > <link href=manifest.json rel=manifest crossorigin=use-credentials> <script>__SAPPER__={baseUrl:"/link-status",preloaded:[void 0,{}]};if('serviceWorker' in navigator)navigator.serviceWorker.register('/link-status/service-worker.js');(function(){try{eval("async function x(){}");var main="/link-status/client/client.eff757f8.js"}catch(e){main="/link-status/client/legacy/client.453cab80.js"};var s=document.createElement("script");try{new Function("if(0)import('')")();s.src=main;s.type="module";s.crossOrigin="use-credentials";}catch(e){s.src="/link-status/client/shimport@2.0.5.js";s.setAttribute("data-main",main);}document.head.appendChild(s);}());</script> <link href=client/client-31a52aa5.css rel=stylesheet><link href=client/createOctokit-a85f76c7.css rel=stylesheet><link href=client/index-b0b6455a.css rel=stylesheet> <title>Link Status</title> <script>// If `prefers-color-scheme` is not supported, fall back to light mode.
       // In this case, light.css will be downloaded with `highest` priority.
       if (typeof window !== "undefined" && typeof document !== "undefined" && "matchMedia" in window && window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
         document.documentElement.style.display = 'none';
