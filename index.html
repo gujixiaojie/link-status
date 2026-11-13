@@ -1,23 +1,10 @@
 <!DOCTYPE html> <html lang=en> <head><script>
 (function(){
 var SITES={"饭搭子影视": "https://fdzys.com", "七味网": "https://www.qwmkv.com", "茶杯狐": "https://cupfox.love", "央视网直播大全": "https://tv.cctv.com/live", "七七影院": "https://www.qiqi89.com", "影猫の仓库": "https://www.ymck.pro", "追剧达人": "https://www.npjtjx.cn", "可可影视": "https://www.kkys14.com", "西瓜影音": "https://www.siren93.com", "美剧窝": "https://www.mjwo.net", "飞流视频": "https://www.flixflop.com", "囧次元": "https://www.jciyuan.com", "爱电影": "https://y2s52n7.com", "八号影视": "https://www.bahaotv.com", "12光影": "https://12gy.com", "Wow影院": "https://dy.wow2fun.com", "枝枝影视": "https://www.zzoc.cc", "多乐影院": "https://www.drys.top", "努努影院": "https://nnyy.in", "多多影视": "https://323433ssdfd.top", "奇点影视": "https://qidianyingshi.net", "VIP兔": "https://www.viptu.com", "低端影视": "https://ddys.io", "蜻蜓电影": "https://www.qtdy11.com", "爱追剧影视": "https://www.azj66.com", "HDmoli": "https://www.hdmoli.com", "琪琪影院": "https://www.szxwwj.com", "麦田影院": "https://www.mtyy2.cc", "好好看": "https://www.hhkan1.com", "Destiny-TV": "https://www.tvfans.top", "猩球影院": "https://gorilla-flix.com", "在线之家": "https://www.zxzj.run", "FreeOK": "https://www.freeokk.pro", "共青春": "https://gqc.ink", "欧乐影院": "https://www.oleol.com", "蘑菇影视": "https://www.5o5k.com", "66大片网": "https://www.77dpw.vip", "555电影": "https://5k40.top", "懂片帝AI": "https://dongpian1.com", "光速影视": "https://yingshiso.link", "多瑙影院": "https://dnvod.org", "蓝光影院": "https://www.touhaos.cc", "路飞影视": "https://www.lufys.com", "大米星球": "https://dmxq.fun", "4K在线": "https://www.bbibi.cc", "网飞猫": "https://www.ncat22.com", "糖豆影视": "https://www.tdys.cc", "鱼塘社影视": "https://tv.yutangshe.com", "飞快TV": "https://feikuai.in", "爱奇艺": "https://www.iqiyi.com", "腾讯视频": "https://v.qq.com", "优酷": "https://www.youku.com", "PPTV": "https://www.pptv.com", "乐视视频": "https://www.le.com", "搜狐视频": "https://tv.sohu.com", "360影视": "https://www.360kan.com", "风行": "https://www.fun.tv", "华数TV": "https://www.wasu.cn", "柠檬视频": "https://nmsp8.cc", "56视频": "https://www.56.com", "人人影视": "https://www.renren.pro", "好看影视": "https://hkys2.cc", "两个BT影视": "https://www.bttwo.org", "NO视频": "https://www.novipnoad.uk", "樱花影院": "https://www.dcjyb.com", "抖音": "https://www.douyin.com/vs", "LIBVIO": "https://www.libvio.io", "低调影视": "https://ddys.app", "多多追剧": "https://duoduozhuiju.com", "注视影视": "https://gaze.red", "看片狂人": "https://www.kpkuang.fun", "西瓜影院": "https://www.bzzdyy.com", "SA视频": "https://www.lsjys11.com", "剧踪电影网": "https://www.juzong01.me", "小唐视频": "https://xiaotie8.com", "拾光影视": "https://tv.time1080.xyz", "千千影视": "https://www.qqys01.com", "绿色影视": "https://lsysw.top", "AnyShort": "https://anyshort.net/zh-Hant", "找剧AI": "https://zhaoju1.com", "毒舌电影": "https://www.dushe3.app", "热播之家": "https://www.rebozj.cc", "4k影视": "https://www.4kvm.top", "宅男影视": "https://zndy.top", "茶杯虎": "https://cuptgr.com", "番茄酱影视": "https://fanqe.cc", "小唐短剧": "https://bikamanhuaapp.com", "硬核指南": "https://yinghezhinan.com", "酷影聚": "https://feikuju.com", "SOTVLA": "https://www.sotvla.cc", "厂长资源": "https://www.4kcz.com", "奈菲影视": "https://www.nfyingshi.com", "雪糕TV": "https://www.xgitv.com", "News-Today": "https://vafvafnotif.com/static/wall.html", "纪录天堂": "https://www.ummua.com", "我爱纪录片": "https://ilovedocu.com", "纪录片仓库": "https://jilulib.com", "哔哩哔哩纪录片": "https://www.bilibili.com/documentary", "央视片库": "https://tv.cctv.com/yxg/index.shtml", "追新番": "https://www.fanxinzhui.com", "LiTV立視": "https://www.litv.tv", "大木屋": "https://www.damuwu.com", "芒果TV": "https://www.mgtv.com", "电视眼": "https://www.tvyan.com", "AcFun": "https://www.acfun.cn", "央视网视频": "https://v.cctv.com", "哔哩哔哩": "https://www.bilibili.com", "好看视频": "https://haokan.baidu.com", "追剧吧": "https://www.zhuiju8.cc", "xb1电影": "https://www.xb1.com", "壹秀影视": "https://www.yixiuwang.com", "鸭鸭资源网": "https://yayazy.org", "u酷资源站": "https://ukuzy2.com", "快车资源网": "https://kuaichezy.com", "闪电资源网": "https://shandianzy.com", "无尽资源采集": "https://wujinzy.cc", "红牛资源": "https://www.hongniuziyuan.tv", "麒麟资源站": "https://www.qilinzyz.com", "冰豆云播": "https://www.bingdou.vip", "兔子VIP视频解析站": "https://htuzi.com/vip", "魔法影视": "https://movie.mofaxi.cn", "SeeNav全网VIP视频解析": "https://movie.seenav.cn", "粤漫之家": "https://www.ymvid.com", "全民解析": "https://www.quanminjiexi.com", "追剧么": "https://www.zhuijume.com/index.php/vod/type/id/1.html", "看剧AI": "https://kanju.ai", "看看鸭": "https://www.kankanya.me", "洛雪TV": "https://tv.lxyy.club", "PPnix": "https://www.ppnix.com/cn", "ZIP0": "https://zip0.com", "极速追剧": "https://jisuzhuiju.com", "片库": "https://4k01.pianku.online", "嘀嗒影视": "https://www.didahd.xyz", "追影": "https://zhuiying3.cc", "歪比巴卜": "https://wbbb1.com", "开心影院": "https://www.kxyy1.cc", "豆花电影网": "https://dhvideo.cc", "91毒舌电影": "https://www.duse0.com", "Auete影视网": "https://www.aeete.com", "APP影院": "https://www.appmovie.art", "来福吧": "https://laifu8.com", "奈飞工厂": "https://www.netflixgc.com"};
-var I18N={"Overall uptime": "可用率", "Average response time": "平均响应", "Active Incidents": "活跃事件", "All systems operational": "所有系统正常", "Live Status": "实时状态", "This page is open source, powered by": "本页基于开源项目构建", "open source": "开源", "Subscribe": "订阅"};
+var I18N={"Overall uptime": "可用率", "Average response time": "平均响应", "Active Incidents": "活跃事件", "All systems operational": "所有系统正常", "Live Status": "实时状态", "This page is open source, powered by": "本页基于开源项目构建", "Subscribe": "订阅"};
 var GOODHASHES=["T66hslhYzr0ySI32ygw9zzDk1V5Y3/jSdSrcKCNE1q8=","Dncpm015G5xYUr04cvus2jfONNNmMv2f8w1jodEgYu4="];
 
-function tr(){
-  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n;
-  while(n=w.nextNode()){
-    var t=n.textContent;
-    if(!t)continue;
-    var trimmed=t.trim();
-    for(var e in I18N){
-      if(trimmed===e){n.textContent=t.replace(e,I18N[e]);break;}
-      if(trimmed.indexOf(e+" ")===0||trimmed.indexOf(" "+e)!==-1||trimmed.endsWith(" "+e)){
-        n.textContent=t.split(e).join(I18N[e]);
-      }
-    }
-  }
-}
+function tr(){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n;while(n=w.nextNode()){var t=n.textContent;if(!t)continue;for(var e in I18N){if(t.indexOf(e)!==-1){n.textContent=t.split(e).join(I18N[e]);}}}
 
 function lk(){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n;while(n=w.nextNode()){var t=n.textContent.trim();if(!t||!SITES[t])continue;var p=n.parentElement;if(!p||p.tagName==="SCRIPT")continue;var a=p.closest("a");if(a){a.href=SITES[t];a.target="_blank";a.rel="noopener";a.onclick=null;}else{var na=document.createElement("a");na.href=SITES[t];na.target="_blank";na.rel="noopener";na.style.cssText="color:inherit;text-decoration:none;cursor:pointer;";na.textContent=t;p.replaceChild(na,n);}}}
 
@@ -25,52 +12,47 @@ function slow(){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TE
 
 function hideStuff(){var links=document.querySelectorAll("a");for(var i=0;i<links.length;i++){if(links[i].href&&links[i].href.indexOf("github.com/")!==-1){links[i].style.display="none";}}}
 
-var grouped=false;
-function group(){
-  if(grouped)return;
-  var main=document.querySelector("main");
-  if(!main)return;
-  var cards=[];
-  var all=main.querySelectorAll("div");
-  for(var i=0;i<all.length;i++){
-    var el=all[i];
-    if(el.children.length<5&&el.textContent.indexOf("可用率")!==-1&&el.textContent.indexOf("平均响应")!==-1){cards.push(el);}
-  }
-  var seen={};
-  cards=cards.filter(function(c){if(seen[c])return false;seen[c]=1;return true;});
-  if(cards.length<10)return;
-  var third=Math.ceil(cards.length/3);
-  for(var g=2;g>=0;g--){
-    var idx=g*third;
-    if(idx<cards.length){
-      var h=document.createElement("div");
-      h.style.cssText="font-size:16px;font-weight:bold;margin:16px 0 8px;padding:6px 12px;background:#3b82f6;color:#fff;border-radius:6px;";
-      h.textContent="第 "+(g+1)+" 组";
-      cards[idx].parentElement.insertBefore(h,cards[idx]);
-    }
-  }
-  grouped=true;
-}
-
 var incidentsMoved=false;
 function reorder(){
   if(incidentsMoved)return;
+  var sections=document.querySelectorAll("main > section.svelte-8lnl4f");
+  if(sections.length<2)return;
+  // 等数据加载：第一个section不再是spinner
+  var first=sections[0];
+  if(first.querySelector(".loading"))return;
+  // 第一个 svelte-8lnl4f 就是活跃事件，移到main最后
   var main=document.querySelector("main");
-  if(!main)return;
-  var kids=main.children;
-  for(var i=0;i<kids.length;i++){
-    var el=kids[i];
-    if(el.tagName!=="SECTION")continue;
-    var txt=el.textContent||"";
-    // 活跃事件特征：包含 "is down" 或 "Incident" 或红色背景卡片
-    var hasIncident=txt.indexOf("is down")!==-1||txt.indexOf("Incident")!==-1||txt.indexOf("活跃事件")!==-1;
-    var hasUptime=txt.indexOf("可用率")!==-1||txt.indexOf("uptime")!==-1;
-    if(hasIncident&&!hasUptime){
-      main.appendChild(el);
-      incidentsMoved=true;
-      return;
+  main.appendChild(first);
+  incidentsMoved=true;
+}
+
+var grouped=false;
+function group(){
+  if(grouped)return;
+  var sections=document.querySelectorAll("main > section.svelte-8lnl4f");
+  if(sections.length<2)return;
+  var siteSection=sections[1]; // 站点列表section
+  if(siteSection.querySelector(".loading"))return;
+  var cards=siteSection.querySelectorAll("div");
+  var real=[];
+  for(var i=0;i<cards.length;i++){
+    var el=cards[i];
+    if(el.children.length<5&&el.textContent.indexOf("可用率")!==-1&&el.textContent.indexOf("平均响应")!==-1){real.push(el);}
+  }
+  var seen={};
+  real=real.filter(function(c){if(seen[c])return false;seen[c]=1;return true;});
+  if(real.length<10)return;
+  var third=Math.ceil(real.length/3);
+  for(var g=2;g>=0;g--){
+    var idx=g*third;
+    if(idx<real.length){
+      var h=document.createElement("div");
+      h.style.cssText="font-size:16px;font-weight:bold;margin:16px 0 8px;padding:6px 12px;background:#3b82f6;color:#fff;border-radius:6px;";
+      h.textContent="第 "+(g+1)+" 组";
+      real[idx].parentElement.insertBefore(h,real[idx]);
     }
   }
+  grouped=true;
 }
 
 var toolbarAdded=false;
@@ -122,7 +104,7 @@ function markCards(){
   }
 }
 
-function proc(){tr();lk();slow();hideStuff();group();reorder();addToolbar();markCards();}
+function proc(){tr();lk();slow();hideStuff();reorder();group();addToolbar();markCards();}
 var mo=new MutationObserver(function(){proc();});
 function start(){mo.observe(document.body,{childList:true,subtree:true});proc();}
 
