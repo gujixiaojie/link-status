@@ -318,15 +318,23 @@ sites:
     url: https://laifu8.com
   - name: 奈飞工厂
     url: https://www.netflixgc.com
+  - name: 茶杯虎
+    url: https://www.725998.com/
+  - name: 密码993xyz影视
+    url: https://123993.xyz/
+  - name: 酷云影院
+    url: https://www.kuyun123.com/
+  - name: 河马短剧场
+    url: https://www.kuaikaw.cn/
+  - name: 云播TV
+    url: https://www.ikanju.cc/
+  - name: 爱看机器人
+    url: https://www.ikanbot.com/
+  - name: 茶杯狐
+    url: https://cupfox.app/
 
 status-website:
   baseUrl: /link-status
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: 追剧监控
   introTitle: "**追剧监控** 网站可用性状态"
   introMessage: 每4小时自动探测，站点掉线自动提醒。
-  navbar:
-    - title: 状态
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
