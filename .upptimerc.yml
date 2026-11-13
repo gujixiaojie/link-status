@@ -322,11 +322,11 @@ sites:
 status-website:
   baseUrl: /link-status
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Link Status
-  introTitle: "**Link Status** 追剧网站可用性监控"
-  introMessage: 每4小时自动探测一次，站点掉线自动提醒。
+  name: 追剧监控
+  introTitle: "**追剧监控** 网站可用性状态"
+  introMessage: 每4小时自动探测，站点掉线自动提醒。
   navbar:
-    - title: Status
+    - title: 状态
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
