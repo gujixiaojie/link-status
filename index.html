@@ -17,39 +17,67 @@ function reorder(){
   if(incidentsMoved)return;
   var sections=document.querySelectorAll("main > section.svelte-8lnl4f");
   if(sections.length<2)return;
-  // 等数据加载：第一个section不再是spinner
   var first=sections[0];
   if(first.querySelector(".loading"))return;
-  // 第一个 svelte-8lnl4f 就是活跃事件，移到main最后
   var main=document.querySelector("main");
   main.appendChild(first);
   incidentsMoved=true;
 }
 
+var sorted=false;
+function sortBySpeed(){
+  if(sorted)return;
+  var sections=document.querySelectorAll("main > section.svelte-8lnl4f");
+  if(sections.length<2)return;
+  var siteSec=sections[1];
+  if(siteSec.querySelector(".loading"))return;
+  // 找所有站点卡片
+  var cards=[];
+  var divs=siteSec.querySelectorAll("div");
+  for(var i=0;i<divs.length;i++){
+    var el=divs[i];
+    if(el.children.length<5&&el.textContent.indexOf("uptime")!==-1&&el.textContent.indexOf("response time")!==-1){
+      var m=el.textContent.match(/(\d+)\s*ms/);
+      var ms=m?parseInt(m[1]):99999;
+      cards.push({el:el,ms:ms});
+    }
+  }
+  // 去重
+  var seen={};
+  cards=cards.filter(function(c){if(seen[c.el])return false;seen[c.el]=1;return true;});
+  if(cards.length<10)return;
+  // 按响应时间升序
+  cards.sort(function(a,b){return a.ms-b.ms;});
+  // 重新插入
+  var parent=cards[0].el.parentNode;
+  for(var i=0;i<cards.length;i++){
+    parent.appendChild(cards[i].el);
+  }
+  sorted=true;
+}
+
 var grouped=false;
 function group(){
   if(grouped)return;
+  if(!sorted)return; // 等排序完再分组
   var sections=document.querySelectorAll("main > section.svelte-8lnl4f");
   if(sections.length<2)return;
-  var siteSection=sections[1]; // 站点列表section
-  if(siteSection.querySelector(".loading"))return;
-  var cards=siteSection.querySelectorAll("div");
-  var real=[];
-  for(var i=0;i<cards.length;i++){
-    var el=cards[i];
-    if(el.children.length<5&&el.textContent.indexOf("可用率")!==-1&&el.textContent.indexOf("平均响应")!==-1){real.push(el);}
+  var siteSection=sections[1];
+  var cards=[];
+  var divs=siteSection.querySelectorAll("div");
+  for(var i=0;i<divs.length;i++){
+    var el=divs[i];
+    if(el.dataset.siteCard)cards.push(el);
   }
-  var seen={};
-  real=real.filter(function(c){if(seen[c])return false;seen[c]=1;return true;});
-  if(real.length<10)return;
-  var third=Math.ceil(real.length/3);
+  if(cards.length<10)return;
+  var third=Math.ceil(cards.length/3);
   for(var g=2;g>=0;g--){
     var idx=g*third;
-    if(idx<real.length){
+    if(idx<cards.length){
       var h=document.createElement("div");
       h.style.cssText="font-size:16px;font-weight:bold;margin:16px 0 8px;padding:6px 12px;background:#3b82f6;color:#fff;border-radius:6px;";
       h.textContent="第 "+(g+1)+" 组";
-      real[idx].parentElement.insertBefore(h,real[idx]);
+      cards[idx].parentElement.insertBefore(h,cards[idx]);
     }
   }
   grouped=true;
@@ -93,18 +121,18 @@ function markCards(){
   for(var i=0;i<all.length;i++){
     var el=all[i];
     if(el.dataset.marked)continue;
-    if(el.children.length<5&&el.textContent.indexOf("可用率")!==-1&&el.textContent.indexOf("平均响应")!==-1){
+    if(el.children.length<5&&el.textContent.indexOf("uptime")!==-1&&el.textContent.indexOf("response time")!==-1){
       el.dataset.marked="1";
       el.dataset.siteCard="1";
       var cs=window.getComputedStyle(el);
-      var isFault=(cs.borderLeftColor&&cs.borderLeftColor.indexOf("229")!==-1)||el.textContent.indexOf("故障")!==-1;
+      var isFault=(cs.borderLeftColor&&cs.borderLeftColor.indexOf("229")!==-1);
       el.dataset.isFault=isFault?"1":"0";
       for(var s in SITES){if(el.textContent.indexOf(s)!==-1){el.dataset.siteName=s;break;}}
     }
   }
 }
 
-function proc(){tr();lk();slow();hideStuff();reorder();group();addToolbar();markCards();}
+function proc(){tr();lk();slow();hideStuff();reorder();sortBySpeed();markCards();group();addToolbar();}
 var mo=new MutationObserver(function(){proc();});
 function start(){mo.observe(document.body,{childList:true,subtree:true});proc();}
 
