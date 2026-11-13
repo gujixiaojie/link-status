@@ -11,28 +11,27 @@ function lk(){
     if(!t||!SITES[t])continue;
     var p=n.parentElement;
     if(!p||p.tagName==="SCRIPT")continue;
-    // 向上找最近的 <a>
     var a=p.closest("a");
-    if(a){
-      // 已有链接，直接改href指向原网站
-      a.href=SITES[t];
-      a.target="_blank";
-      a.rel="noopener";
-      // 移除Sapper路由拦截
-      a.onclick=null;
-    }else{
-      // 没有链接，包一个新的
-      var na=document.createElement("a");
-      na.href=SITES[t];
-      na.target="_blank";
-      na.rel="noopener";
-      na.style.cssText="color:inherit;text-decoration:none;cursor:pointer;";
-      na.textContent=t;
-      p.replaceChild(na,n);
+    if(a){a.href=SITES[t];a.target="_blank";a.rel="noopener";a.onclick=null;}
+    else{var na=document.createElement("a");na.href=SITES[t];na.target="_blank";na.rel="noopener";na.style.cssText="color:inherit;text-decoration:none;cursor:pointer;";na.textContent=t;p.replaceChild(na,n);}
+  }
+}
+
+var reordered=false;
+function reorder(){
+  if(reordered)return;
+  var main=document.querySelector("main")||document.body;
+  var kids=main.children;
+  for(var i=0;i<kids.length;i++){
+    var txt=kids[i].textContent||"";
+    if(txt.indexOf("活跃事件")!==-1||txt.indexOf("Active Incidents")!==-1){
+      main.appendChild(kids[i]);
+      reordered=true;
+      break;
     }
   }
 }
-function proc(){tr();lk();}
+function proc(){tr();lk();reorder();}
 var mo=new MutationObserver(function(){proc();});
 function start(){mo.observe(document.body,{childList:true,subtree:true});proc();}
 function gate(){
