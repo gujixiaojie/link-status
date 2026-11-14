@@ -34,7 +34,8 @@
     "timeMonth": 42,
     "timeYear": 42,
     "dailyMinutesDown": {
-      "2026-11-13": 1064
+      "2026-11-14": 107,
+      "2026-11-13": 1196
     }
   },
   {
@@ -114,19 +115,20 @@
     "url": "https://www.npjtjx.cn",
     "icon": "https://icons.duckduckgo.com/ip3/www.npjtjx.cn.ico",
     "slug": "追剧达人",
-    "status": "down",
-    "uptime": "98.12%",
-    "uptimeDay": "98.12%",
-    "uptimeWeek": "98.12%",
-    "uptimeMonth": "98.12%",
-    "uptimeYear": "98.12%",
-    "time": 3812,
-    "timeDay": 3812,
-    "timeWeek": 3812,
-    "timeMonth": 3812,
-    "timeYear": 3812,
+    "status": "up",
+    "uptime": "81.01%",
+    "uptimeDay": "81.01%",
+    "uptimeWeek": "81.01%",
+    "uptimeMonth": "81.01%",
+    "uptimeYear": "81.01%",
+    "time": 3474,
+    "timeDay": 3474,
+    "timeWeek": 3474,
+    "timeMonth": 3474,
+    "timeYear": 3474,
     "dailyMinutesDown": {
-      "2026-11-13": 20
+      "2026-11-14": 92,
+      "2026-11-13": 152
     }
   },
   {
@@ -146,7 +148,8 @@
     "timeMonth": 993,
     "timeYear": 993,
     "dailyMinutesDown": {
-      "2026-11-13": 1063
+      "2026-11-14": 107,
+      "2026-11-13": 1196
     }
   },
   {
@@ -166,7 +169,8 @@
     "timeMonth": 899,
     "timeYear": 899,
     "dailyMinutesDown": {
-      "2026-11-13": 1063
+      "2026-11-14": 107,
+      "2026-11-13": 1195
     }
   },
   {
@@ -211,11 +215,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.jciyuan.com.ico",
     "slug": "囧次元",
     "status": "up",
-    "uptime": "92.73%",
-    "uptimeDay": "92.73%",
-    "uptimeWeek": "92.73%",
-    "uptimeMonth": "92.73%",
-    "uptimeYear": "92.73%",
+    "uptime": "94.09%",
+    "uptimeDay": "94.09%",
+    "uptimeWeek": "94.09%",
+    "uptimeMonth": "94.09%",
+    "uptimeYear": "94.09%",
     "time": 2198,
     "timeDay": 2198,
     "timeWeek": 2198,
@@ -230,19 +234,20 @@
     "url": "https://y2s52n7.com",
     "icon": "https://icons.duckduckgo.com/ip3/y2s52n7.com.ico",
     "slug": "爱电影",
-    "status": "down",
-    "uptime": "99.11%",
-    "uptimeDay": "98.71%",
-    "uptimeWeek": "99.11%",
-    "uptimeMonth": "99.11%",
-    "uptimeYear": "99.11%",
-    "time": 3680,
-    "timeDay": 3709,
-    "timeWeek": 3680,
-    "timeMonth": 3680,
-    "timeYear": 3680,
+    "status": "up",
+    "uptime": "89.48%",
+    "uptimeDay": "83.07%",
+    "uptimeWeek": "89.48%",
+    "uptimeMonth": "89.48%",
+    "uptimeYear": "89.48%",
+    "time": 3598,
+    "timeDay": 3600,
+    "timeWeek": 3598,
+    "timeMonth": 3598,
+    "timeYear": 3598,
     "dailyMinutesDown": {
-      "2026-11-13": 19
+      "2026-11-14": 93,
+      "2026-11-13": 151
     }
   },
   {
@@ -280,7 +285,8 @@
     "timeMonth": 709,
     "timeYear": 709,
     "dailyMinutesDown": {
-      "2026-11-13": 1063
+      "2026-11-14": 107,
+      "2026-11-13": 1195
     }
   },
   {
@@ -318,7 +324,8 @@
     "timeMonth": 46,
     "timeYear": 46,
     "dailyMinutesDown": {
-      "2026-11-13": 1062
+      "2026-11-14": 107,
+      "2026-11-13": 1195
     }
   },
   {
@@ -536,7 +543,8 @@
     "timeMonth": 1000,
     "timeYear": 1000,
     "dailyMinutesDown": {
-      "2026-11-13": 1061
+      "2026-11-14": 108,
+      "2026-11-13": 1194
     }
   },
   {
@@ -610,7 +618,8 @@
     "timeMonth": 45,
     "timeYear": 45,
     "dailyMinutesDown": {
-      "2026-11-13": 1061
+      "2026-11-14": 108,
+      "2026-11-13": 1193
     }
   },
   {
@@ -630,7 +639,8 @@
     "timeMonth": 531,
     "timeYear": 531,
     "dailyMinutesDown": {
-      "2026-11-13": 1061
+      "2026-11-14": 108,
+      "2026-11-13": 1193
     }
   },
   {
@@ -812,7 +822,8 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2026-11-13": 1061
+      "2026-11-14": 108,
+      "2026-11-13": 1193
     }
   },
   {
@@ -850,7 +861,8 @@
     "timeMonth": 932,
     "timeYear": 932,
     "dailyMinutesDown": {
-      "2026-11-13": 1060
+      "2026-11-14": 108,
+      "2026-11-13": 1192
     }
   },
   {
@@ -877,18 +889,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/tv.yutangshe.com.ico",
     "slug": "鱼塘社影视",
     "status": "up",
-    "uptime": "14.29%",
-    "uptimeDay": "14.29%",
-    "uptimeWeek": "14.29%",
-    "uptimeMonth": "14.29%",
-    "uptimeYear": "14.29%",
+    "uptime": "11.62%",
+    "uptimeDay": "11.62%",
+    "uptimeWeek": "11.62%",
+    "uptimeMonth": "11.62%",
+    "uptimeYear": "11.62%",
     "time": 815,
     "timeDay": 815,
     "timeWeek": 815,
     "timeMonth": 815,
     "timeYear": 815,
     "dailyMinutesDown": {
-      "2026-11-13": 895
+      "2026-11-14": 108,
+      "2026-11-13": 1027
     }
   },
   {
@@ -897,18 +910,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/feikuai.in.ico",
     "slug": "tv",
     "status": "up",
-    "uptime": "98.79%",
-    "uptimeDay": "98.26%",
-    "uptimeWeek": "98.79%",
-    "uptimeMonth": "98.79%",
-    "uptimeYear": "98.79%",
-    "time": 1096,
-    "timeDay": 1143,
-    "timeWeek": 1096,
-    "timeMonth": 1096,
-    "timeYear": 1096,
+    "uptime": "98.89%",
+    "uptimeDay": "98.21%",
+    "uptimeWeek": "98.89%",
+    "uptimeMonth": "98.89%",
+    "uptimeYear": "98.89%",
+    "time": 1099,
+    "timeDay": 1145,
+    "timeWeek": 1099,
+    "timeMonth": 1099,
+    "timeYear": 1099,
     "dailyMinutesDown": {
-      "2026-11-13": 25
+      "2026-11-13": 22,
+      "2026-11-14": 4
     }
   },
   {
@@ -1036,7 +1050,8 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2026-11-13": 1059
+      "2026-11-14": 108,
+      "2026-11-13": 1191
     }
   },
   {
@@ -1063,18 +1078,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.wasu.cn.ico",
     "slug": "tv",
     "status": "up",
-    "uptime": "98.79%",
-    "uptimeDay": "98.26%",
-    "uptimeWeek": "98.79%",
-    "uptimeMonth": "98.79%",
-    "uptimeYear": "98.79%",
-    "time": 1096,
-    "timeDay": 1143,
-    "timeWeek": 1096,
-    "timeMonth": 1096,
-    "timeYear": 1096,
+    "uptime": "98.89%",
+    "uptimeDay": "98.21%",
+    "uptimeWeek": "98.89%",
+    "uptimeMonth": "98.89%",
+    "uptimeYear": "98.89%",
+    "time": 1099,
+    "timeDay": 1145,
+    "timeWeek": 1099,
+    "timeMonth": 1099,
+    "timeYear": 1099,
     "dailyMinutesDown": {
-      "2026-11-13": 25
+      "2026-11-13": 22,
+      "2026-11-14": 4
     }
   },
   {
@@ -1094,7 +1110,8 @@
     "timeMonth": 42,
     "timeYear": 42,
     "dailyMinutesDown": {
-      "2026-11-13": 1059
+      "2026-11-14": 108,
+      "2026-11-13": 1191
     }
   },
   {
@@ -1150,7 +1167,8 @@
     "timeMonth": 38,
     "timeYear": 38,
     "dailyMinutesDown": {
-      "2026-11-13": 1058
+      "2026-11-14": 108,
+      "2026-11-13": 1190
     }
   },
   {
@@ -1188,7 +1206,8 @@
     "timeMonth": 52,
     "timeYear": 52,
     "dailyMinutesDown": {
-      "2026-11-13": 1308,
+      "2026-11-14": 108,
+      "2026-11-13": 1440,
       "2026-11-12": 771
     }
   },
@@ -1263,7 +1282,8 @@
     "timeMonth": 736,
     "timeYear": 736,
     "dailyMinutesDown": {
-      "2026-11-13": 1308,
+      "2026-11-14": 108,
+      "2026-11-13": 1440,
       "2026-11-12": 771
     }
   },
@@ -1272,18 +1292,20 @@
     "url": "https://ddys.app",
     "icon": "https://icons.duckduckgo.com/ip3/ddys.app.ico",
     "slug": "低调影视",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 651,
-    "timeDay": 651,
-    "timeWeek": 651,
-    "timeMonth": 651,
-    "timeYear": 651,
-    "dailyMinutesDown": {}
+    "status": "down",
+    "uptime": "99.41%",
+    "uptimeDay": "99.41%",
+    "uptimeWeek": "99.41%",
+    "uptimeMonth": "99.41%",
+    "uptimeYear": "99.41%",
+    "time": 634,
+    "timeDay": 634,
+    "timeWeek": 634,
+    "timeMonth": 634,
+    "timeYear": 634,
+    "dailyMinutesDown": {
+      "2026-11-14": 8
+    }
   },
   {
     "name": "多多追剧",
@@ -1338,7 +1360,8 @@
     "timeMonth": 993,
     "timeYear": 993,
     "dailyMinutesDown": {
-      "2026-11-13": 1064
+      "2026-11-14": 108,
+      "2026-11-13": 1196
     }
   },
   {
@@ -1365,18 +1388,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/jsntdl.com.ico",
     "slug": "西瓜影院",
     "status": "up",
-    "uptime": "99.60%",
-    "uptimeDay": "99.42%",
-    "uptimeWeek": "99.60%",
-    "uptimeMonth": "99.60%",
-    "uptimeYear": "99.60%",
-    "time": 282,
-    "timeDay": 282,
-    "timeWeek": 282,
-    "timeMonth": 282,
-    "timeYear": 282,
+    "uptime": "99.62%",
+    "uptimeDay": "99.39%",
+    "uptimeWeek": "99.62%",
+    "uptimeMonth": "99.62%",
+    "uptimeYear": "99.62%",
+    "time": 285,
+    "timeDay": 286,
+    "timeWeek": 285,
+    "timeMonth": 285,
+    "timeYear": 285,
     "dailyMinutesDown": {
-      "2026-11-13": 7
+      "2026-11-13": 6,
+      "2026-11-14": 2
     }
   },
   {
@@ -1403,19 +1427,20 @@
     "icon": "https://icons.duckduckgo.com/ip3/juzong.vip.ico",
     "slug": "剧踪电影网",
     "status": "down",
-    "uptime": "11.73%",
-    "uptimeDay": "16.90%",
-    "uptimeWeek": "11.73%",
-    "uptimeMonth": "11.73%",
-    "uptimeYear": "11.73%",
-    "time": 236,
-    "timeDay": 243,
-    "timeWeek": 236,
-    "timeMonth": 236,
-    "timeYear": 236,
+    "uptime": "10.73%",
+    "uptimeDay": "17.25%",
+    "uptimeWeek": "10.73%",
+    "uptimeMonth": "10.73%",
+    "uptimeYear": "10.73%",
+    "time": 243,
+    "timeDay": 249,
+    "timeWeek": 243,
+    "timeMonth": 243,
+    "timeYear": 243,
     "dailyMinutesDown": {
-      "2026-11-13": 1064,
-      "2026-11-12": 768
+      "2026-11-13": 1196,
+      "2026-11-12": 768,
+      "2026-11-14": 103
     }
   },
   {
@@ -1489,7 +1514,8 @@
     "timeMonth": 47,
     "timeYear": 47,
     "dailyMinutesDown": {
-      "2026-11-13": 1308,
+      "2026-11-14": 108,
+      "2026-11-13": 1440,
       "2026-11-12": 769
     }
   },
@@ -1546,7 +1572,8 @@
     "timeMonth": 935,
     "timeYear": 935,
     "dailyMinutesDown": {
-      "2026-11-13": 1055
+      "2026-11-14": 108,
+      "2026-11-13": 1187
     }
   },
   {
@@ -1572,18 +1599,20 @@
     "url": "https://www.4kvm.top",
     "icon": "https://icons.duckduckgo.com/ip3/www.4kvm.top.ico",
     "slug": "4k",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "99.74%",
+    "uptimeDay": "99.58%",
+    "uptimeWeek": "99.74%",
+    "uptimeMonth": "99.74%",
+    "uptimeYear": "99.74%",
     "time": 1390,
     "timeDay": 1401,
     "timeWeek": 1390,
     "timeMonth": 1390,
     "timeYear": 1390,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-11-14": 6
+    }
   },
   {
     "name": "宅男影视",
@@ -1728,7 +1757,8 @@
     "timeMonth": 368,
     "timeYear": 368,
     "dailyMinutesDown": {
-      "2026-11-13": 1308,
+      "2026-11-14": 108,
+      "2026-11-13": 1440,
       "2026-11-12": 771
     }
   },
@@ -1749,7 +1779,8 @@
     "timeMonth": 736,
     "timeYear": 736,
     "dailyMinutesDown": {
-      "2026-11-13": 1308,
+      "2026-11-14": 108,
+      "2026-11-13": 1440,
       "2026-11-12": 771
     }
   },
@@ -1759,18 +1790,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.bzzdyy.com.ico",
     "slug": "西瓜影院",
     "status": "up",
-    "uptime": "99.60%",
-    "uptimeDay": "99.42%",
-    "uptimeWeek": "99.60%",
-    "uptimeMonth": "99.60%",
-    "uptimeYear": "99.60%",
-    "time": 282,
-    "timeDay": 282,
-    "timeWeek": 282,
-    "timeMonth": 282,
-    "timeYear": 282,
+    "uptime": "99.62%",
+    "uptimeDay": "99.39%",
+    "uptimeWeek": "99.62%",
+    "uptimeMonth": "99.62%",
+    "uptimeYear": "99.62%",
+    "time": 285,
+    "timeDay": 286,
+    "timeWeek": 285,
+    "timeMonth": 285,
+    "timeYear": 285,
     "dailyMinutesDown": {
-      "2026-11-13": 7
+      "2026-11-13": 6,
+      "2026-11-14": 2
     }
   },
   {
@@ -1790,7 +1822,8 @@
     "timeMonth": 52,
     "timeYear": 52,
     "dailyMinutesDown": {
-      "2026-11-13": 1308,
+      "2026-11-14": 108,
+      "2026-11-13": 1440,
       "2026-11-12": 771
     }
   },
@@ -1847,7 +1880,8 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2026-11-13": 1061
+      "2026-11-14": 108,
+      "2026-11-13": 1193
     }
   },
   {
@@ -1874,18 +1908,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.xgitv.com.ico",
     "slug": "tv",
     "status": "up",
-    "uptime": "98.79%",
-    "uptimeDay": "98.26%",
-    "uptimeWeek": "98.79%",
-    "uptimeMonth": "98.79%",
-    "uptimeYear": "98.79%",
-    "time": 1096,
-    "timeDay": 1143,
-    "timeWeek": 1096,
-    "timeMonth": 1096,
-    "timeYear": 1096,
+    "uptime": "98.89%",
+    "uptimeDay": "98.21%",
+    "uptimeWeek": "98.89%",
+    "uptimeMonth": "98.89%",
+    "uptimeYear": "98.89%",
+    "time": 1099,
+    "timeDay": 1145,
+    "timeWeek": 1099,
+    "timeMonth": 1099,
+    "timeYear": 1099,
     "dailyMinutesDown": {
-      "2026-11-13": 25
+      "2026-11-13": 22,
+      "2026-11-14": 4
     }
   },
   {
@@ -1923,7 +1958,8 @@
     "timeMonth": 368,
     "timeYear": 368,
     "dailyMinutesDown": {
-      "2026-11-13": 1308,
+      "2026-11-14": 108,
+      "2026-11-13": 1440,
       "2026-11-12": 771
     }
   },
@@ -2095,18 +2131,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.mgtv.com.ico",
     "slug": "tv",
     "status": "up",
-    "uptime": "98.79%",
-    "uptimeDay": "98.26%",
-    "uptimeWeek": "98.79%",
-    "uptimeMonth": "98.79%",
-    "uptimeYear": "98.79%",
-    "time": 1096,
-    "timeDay": 1143,
-    "timeWeek": 1096,
-    "timeMonth": 1096,
-    "timeYear": 1096,
+    "uptime": "98.89%",
+    "uptimeDay": "98.21%",
+    "uptimeWeek": "98.89%",
+    "uptimeMonth": "98.89%",
+    "uptimeYear": "98.89%",
+    "time": 1099,
+    "timeDay": 1145,
+    "timeWeek": 1099,
+    "timeMonth": 1099,
+    "timeYear": 1099,
     "dailyMinutesDown": {
-      "2026-11-13": 25
+      "2026-11-13": 22,
+      "2026-11-14": 4
     }
   },
   {
@@ -2133,11 +2170,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.acfun.cn.ico",
     "slug": "ac-fun",
     "status": "up",
-    "uptime": "85.90%",
-    "uptimeDay": "85.90%",
-    "uptimeWeek": "85.90%",
-    "uptimeMonth": "85.90%",
-    "uptimeYear": "85.90%",
+    "uptime": "88.54%",
+    "uptimeDay": "88.54%",
+    "uptimeWeek": "88.54%",
+    "uptimeMonth": "88.54%",
+    "uptimeYear": "88.54%",
     "time": 3439,
     "timeDay": 3439,
     "timeWeek": 3439,
@@ -2207,18 +2244,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.mgtv.com.ico",
     "slug": "tv",
     "status": "up",
-    "uptime": "98.79%",
-    "uptimeDay": "98.26%",
-    "uptimeWeek": "98.79%",
-    "uptimeMonth": "98.79%",
-    "uptimeYear": "98.79%",
-    "time": 1096,
-    "timeDay": 1143,
-    "timeWeek": 1096,
-    "timeMonth": 1096,
-    "timeYear": 1096,
+    "uptime": "98.89%",
+    "uptimeDay": "98.21%",
+    "uptimeWeek": "98.89%",
+    "uptimeMonth": "98.89%",
+    "uptimeYear": "98.89%",
+    "time": 1099,
+    "timeDay": 1145,
+    "timeWeek": 1099,
+    "timeMonth": 1099,
+    "timeYear": 1099,
     "dailyMinutesDown": {
-      "2026-11-13": 25
+      "2026-11-13": 22,
+      "2026-11-14": 4
     }
   },
   {
@@ -2256,7 +2294,8 @@
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2026-11-13": 1054
+      "2026-11-14": 108,
+      "2026-11-13": 1185
     }
   },
   {
@@ -2319,18 +2358,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/kuaichezy.com.ico",
     "slug": "快车资源网",
     "status": "down",
-    "uptime": "62.72%",
-    "uptimeDay": "62.72%",
-    "uptimeWeek": "62.72%",
-    "uptimeMonth": "62.72%",
-    "uptimeYear": "62.72%",
+    "uptime": "50.95%",
+    "uptimeDay": "50.95%",
+    "uptimeWeek": "50.95%",
+    "uptimeMonth": "50.95%",
+    "uptimeYear": "50.95%",
     "time": 9562,
     "timeDay": 9562,
     "timeWeek": 9562,
     "timeMonth": 9562,
     "timeYear": 9562,
     "dailyMinutesDown": {
-      "2026-11-13": 387
+      "2026-11-14": 108,
+      "2026-11-13": 519
     }
   },
   {
@@ -2446,19 +2486,20 @@
     "url": "https://movie.mofaxi.cn",
     "icon": "https://icons.duckduckgo.com/ip3/movie.mofaxi.cn.ico",
     "slug": "魔法影视",
-    "status": "down",
-    "uptime": "10.57%",
-    "uptimeDay": "10.57%",
-    "uptimeWeek": "10.57%",
-    "uptimeMonth": "10.57%",
-    "uptimeYear": "10.57%",
-    "time": 1143,
-    "timeDay": 1143,
-    "timeWeek": 1143,
-    "timeMonth": 1143,
-    "timeYear": 1143,
+    "status": "up",
+    "uptime": "8.83%",
+    "uptimeDay": "8.83%",
+    "uptimeWeek": "8.83%",
+    "uptimeMonth": "8.83%",
+    "uptimeYear": "8.83%",
+    "time": 1068,
+    "timeDay": 1068,
+    "timeWeek": 1068,
+    "timeMonth": 1068,
+    "timeYear": 1068,
     "dailyMinutesDown": {
-      "2026-11-13": 929
+      "2026-11-13": 1061,
+      "2026-11-14": 105
     }
   },
   {
@@ -2593,18 +2634,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/tv.lxyy.club.ico",
     "slug": "tv",
     "status": "up",
-    "uptime": "98.79%",
-    "uptimeDay": "98.26%",
-    "uptimeWeek": "98.79%",
-    "uptimeMonth": "98.79%",
-    "uptimeYear": "98.79%",
-    "time": 1096,
-    "timeDay": 1143,
-    "timeWeek": 1096,
-    "timeMonth": 1096,
-    "timeYear": 1096,
+    "uptime": "98.89%",
+    "uptimeDay": "98.21%",
+    "uptimeWeek": "98.89%",
+    "uptimeMonth": "98.89%",
+    "uptimeYear": "98.89%",
+    "time": 1099,
+    "timeDay": 1145,
+    "timeWeek": 1099,
+    "timeMonth": 1099,
+    "timeYear": 1099,
     "dailyMinutesDown": {
-      "2026-11-13": 25
+      "2026-11-13": 22,
+      "2026-11-14": 4
     }
   },
   {
@@ -2642,7 +2684,8 @@
     "timeMonth": 993,
     "timeYear": 993,
     "dailyMinutesDown": {
-      "2026-11-13": 1064
+      "2026-11-14": 108,
+      "2026-11-13": 1196
     }
   },
   {
@@ -2669,19 +2712,20 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.juzong01.me.ico",
     "slug": "剧踪电影网",
     "status": "down",
-    "uptime": "11.73%",
-    "uptimeDay": "16.90%",
-    "uptimeWeek": "11.73%",
-    "uptimeMonth": "11.73%",
-    "uptimeYear": "11.73%",
-    "time": 236,
-    "timeDay": 243,
-    "timeWeek": 236,
-    "timeMonth": 236,
-    "timeYear": 236,
+    "uptime": "10.73%",
+    "uptimeDay": "17.25%",
+    "uptimeWeek": "10.73%",
+    "uptimeMonth": "10.73%",
+    "uptimeYear": "10.73%",
+    "time": 243,
+    "timeDay": 249,
+    "timeWeek": 243,
+    "timeMonth": 243,
+    "timeYear": 243,
     "dailyMinutesDown": {
-      "2026-11-13": 1065,
-      "2026-11-12": 768
+      "2026-11-13": 1196,
+      "2026-11-12": 768,
+      "2026-11-14": 103
     }
   },
   {
@@ -2773,7 +2817,8 @@
     "timeMonth": 615,
     "timeYear": 615,
     "dailyMinutesDown": {
-      "2026-11-13": 1309,
+      "2026-11-14": 108,
+      "2026-11-13": 1440,
       "2026-11-12": 769
     }
   },
@@ -2794,7 +2839,8 @@
     "timeMonth": 189,
     "timeYear": 189,
     "dailyMinutesDown": {
-      "2026-11-13": 1309,
+      "2026-11-14": 108,
+      "2026-11-13": 1440,
       "2026-11-12": 770
     }
   },
@@ -2815,7 +2861,8 @@
     "timeMonth": 634,
     "timeYear": 634,
     "dailyMinutesDown": {
-      "2026-11-13": 1309,
+      "2026-11-14": 108,
+      "2026-11-13": 1440,
       "2026-11-12": 770
     }
   },
@@ -2872,7 +2919,8 @@
     "timeMonth": 979,
     "timeYear": 979,
     "dailyMinutesDown": {
-      "2026-11-13": 884
+      "2026-11-14": 108,
+      "2026-11-13": 1015
     }
   },
   {
@@ -2898,19 +2946,20 @@
     "url": "https://www.appmovie.art",
     "icon": "https://icons.duckduckgo.com/ip3/www.appmovie.art.ico",
     "slug": "app",
-    "status": "down",
-    "uptime": "60.89%",
-    "uptimeDay": "60.89%",
-    "uptimeWeek": "60.89%",
-    "uptimeMonth": "60.89%",
-    "uptimeYear": "60.89%",
-    "time": 671,
-    "timeDay": 671,
-    "timeWeek": 671,
-    "timeMonth": 671,
-    "timeYear": 671,
+    "status": "up",
+    "uptime": "47.64%",
+    "uptimeDay": "47.64%",
+    "uptimeWeek": "47.64%",
+    "uptimeMonth": "47.64%",
+    "uptimeYear": "47.64%",
+    "time": 656,
+    "timeDay": 656,
+    "timeWeek": 656,
+    "timeMonth": 656,
+    "timeYear": 656,
     "dailyMinutesDown": {
-      "2026-11-13": 332
+      "2026-11-13": 464,
+      "2026-11-14": 107
     }
   },
   {
@@ -2919,11 +2968,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/laifu8.com.ico",
     "slug": "来福吧",
     "status": "up",
-    "uptime": "91.12%",
-    "uptimeDay": "91.12%",
-    "uptimeWeek": "91.12%",
-    "uptimeMonth": "91.12%",
-    "uptimeYear": "91.12%",
+    "uptime": "93.07%",
+    "uptimeDay": "93.07%",
+    "uptimeWeek": "93.07%",
+    "uptimeMonth": "93.07%",
+    "uptimeYear": "93.07%",
     "time": 668,
     "timeDay": 668,
     "timeWeek": 668,
@@ -2993,18 +3042,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.kuyun123.com.ico",
     "slug": "酷云影院",
     "status": "down",
-    "uptime": "0.03%",
-    "uptimeDay": "0.03%",
-    "uptimeWeek": "0.03%",
-    "uptimeMonth": "0.03%",
-    "uptimeYear": "0.03%",
+    "uptime": "0.02%",
+    "uptimeDay": "0.02%",
+    "uptimeWeek": "0.02%",
+    "uptimeMonth": "0.02%",
+    "uptimeYear": "0.02%",
     "time": 51,
     "timeDay": 51,
     "timeWeek": 51,
     "timeMonth": 51,
     "timeYear": 51,
     "dailyMinutesDown": {
-      "2026-11-13": 618
+      "2026-11-14": 108,
+      "2026-11-13": 749
     }
   },
   {
@@ -3031,18 +3081,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/www.ikanju.cc.ico",
     "slug": "tv",
     "status": "up",
-    "uptime": "98.79%",
-    "uptimeDay": "98.26%",
-    "uptimeWeek": "98.79%",
-    "uptimeMonth": "98.79%",
-    "uptimeYear": "98.79%",
-    "time": 1096,
-    "timeDay": 1143,
-    "timeWeek": 1096,
-    "timeMonth": 1096,
-    "timeYear": 1096,
+    "uptime": "98.89%",
+    "uptimeDay": "98.21%",
+    "uptimeWeek": "98.89%",
+    "uptimeMonth": "98.89%",
+    "uptimeYear": "98.89%",
+    "time": 1099,
+    "timeDay": 1145,
+    "timeWeek": 1099,
+    "timeMonth": 1099,
+    "timeYear": 1099,
     "dailyMinutesDown": {
-      "2026-11-13": 25
+      "2026-11-13": 22,
+      "2026-11-14": 4
     }
   },
   {
