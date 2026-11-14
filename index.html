@@ -5,14 +5,33 @@ var GOODHASHES = ["T66hslhYzr0ySI32ygw9zzDk1V5Y3/jSdSrcKCNE1q8=","Dncpm015G5xYUr
 var DATA_URL = "./api-data.json";
 var myData = null;
 
+// === 关键：阻止 Sapper 导航到 error 页 ===
+var origPush = history.pushState;
+var origReplace = history.replaceState;
+history.pushState = function(){ 
+  // 阻止导航到 error
+  var url = arguments[2] || "";
+  if(url.indexOf("error") !== -1) {
+    console.log("Blocked navigation to error page");
+    return;
+  }
+  return origPush.apply(this, arguments);
+};
+history.replaceState = function(){
+  var url = arguments[2] || "";
+  if(url.indexOf("error") !== -1) {
+    console.log("Blocked replaceState to error page");
+    return;
+  }
+  return origReplace.apply(this, arguments);
+};
+
 function renderPage(sites){
-  // 正常站点按响应时间排序
   var goodSites = sites.filter(function(s){return s.uptime_day>=100;});
   goodSites.sort(function(a,b){
     var ra=a.rt_overall||99999; var rb=b.rt_overall||99999;
     return ra-rb;
   });
-  // 故障站点
   var faultSites = sites.filter(function(s){return s.uptime_day<100;});
 
   function card(s){
@@ -29,14 +48,11 @@ function renderPage(sites){
 
   var html='<div style="max-width:800px;margin:0 auto;padding:16px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;">';
   html+='<header style="margin-bottom:20px;"><h1 style="font-size:24px;font-weight:bold;color:#1a202c;margin:0 0 4px;">追剧监控 <span style="font-size:18px;font-weight:normal;color:#4a5568;">网站可用性状态</span></h1><p style="font-size:14px;color:#718096;margin:0;">每4小时自动探测，站点掉线自动提醒。</p></header>';
-  
-  // 工具栏
   html+='<div style="position:sticky;top:0;z-index:100;background:#fff;padding:10px 12px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1);display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:16px;">';
   html+='<input id="__search__" type="text" placeholder="搜索站点..." style="flex:1;min-width:120px;padding:8px 12px;border:1px solid #ddd;border-radius:8px;font-size:14px;outline:none;" />';
   html+='<label style="font-size:13px;white-space:nowrap;display:flex;align-items:center;gap:4px;cursor:pointer;"><input type="checkbox" id="__faultonly__" style="cursor:pointer;">只看故障</label>';
   html+='<button id="__dark__" style="padding:8px 14px;border:1px solid #ddd;border-radius:8px;background:#fff;cursor:pointer;font-size:13px;">暗色</button></div>';
 
-  // 实时状态（正常站点）在上面
   html+='<h2 style="font-size:20px;font-weight:bold;color:#1a202c;margin:0 0 12px;">实时状态（'+goodSites.length+'个正常）</h2>';
   var third=Math.ceil(goodSites.length/3);
   for(var g=0;g<3;g++){
@@ -46,7 +62,6 @@ function renderPage(sites){
     for(var i=start;i<end;i++) html+=card(goodSites[i]);
   }
 
-  // 活跃事件（故障站点）在下面
   if(faultSites.length>0){
     html+='<h2 style="font-size:20px;font-weight:bold;color:#e53e3e;margin:28px 0 12px;">活跃事件（'+faultSites.length+'个站点故障）</h2>';
     for(var i=0;i<faultSites.length;i++) html+=card(faultSites[i]);
@@ -79,11 +94,14 @@ function loadData(){
     });
 }
 
+// 持续监控：如果 body 被 Sapper 替换了，立即重新渲染
 setInterval(function(){
-  if(sessionStorage.getItem("authed")==="1" && myData && !document.getElementById("__search__")){
-    renderPage(myData);
+  if(sessionStorage.getItem("authed")==="1" && myData){
+    if(!document.getElementById("__search__")){
+      renderPage(myData);
+    }
   }
-}, 500);
+}, 300);
 
 var darkCss=document.createElement("style");
 darkCss.textContent=".dark-mode{filter:invert(1) hue-rotate(180deg);}.dark-mode img,.dark-mode canvas,.dark-mode svg{filter:invert(1) hue-rotate(180deg);}";
@@ -125,7 +143,12 @@ function showGate(){
   inp.onkeydown=function(e){if(e.key==="Enter")ok();};
 }
 
-if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",showGate);}else{showGate();}
+// 立即执行，不等 DOMContentLoaded
+if(document.body){
+  showGate();
+}else{
+  document.addEventListener("DOMContentLoaded", showGate);
+}
 })();
 
 </script> <meta charset=utf-8> <meta content="width=device-width,initial-scale=1" name=viewport> <meta content=#333333 name=theme-color> <base href=/link-status/ > <link href=manifest.json rel=manifest crossorigin=use-credentials> <script>__SAPPER__={baseUrl:"/link-status",preloaded:[void 0,{}]};if('serviceWorker' in navigator)navigator.serviceWorker.register('/link-status/service-worker.js');(function(){try{eval("async function x(){}");var main="/link-status/client/client.1e920268.js"}catch(e){main="/link-status/client/legacy/client.2d682ab0.js"};var s=document.createElement("script");try{new Function("if(0)import('')")();s.src=main;s.type="module";s.crossOrigin="use-credentials";}catch(e){s.src="/link-status/client/shimport@2.0.5.js";s.setAttribute("data-main",main);}document.head.appendChild(s);}());</script> <link href=client/client-31a52aa5.css rel=stylesheet><link href=client/createOctokit-a85f76c7.css rel=stylesheet><link href=client/index-b0b6455a.css rel=stylesheet> <title>追剧监控</title> <script>// If `prefers-color-scheme` is not supported, fall back to light mode.
