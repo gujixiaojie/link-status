@@ -4,65 +4,68 @@
 var GOODHASHES = ["T66hslhYzr0ySI32ygw9zzDk1V5Y3/jSdSrcKCNE1q8=","Dncpm015G5xYUr04cvus2jfONNNmMv2f8w1jodEgYu4="];
 var DATA_URL = "./api-data.json";
 var myData = null;
-var myRendered = false;
 
 function renderPage(sites){
-  sites.sort(function(a,b){
-    var ra=a.rt_overall||99999;
-    var rb=b.rt_overall||99999;
+  // 正常站点按响应时间排序
+  var goodSites = sites.filter(function(s){return s.uptime_day>=100;});
+  goodSites.sort(function(a,b){
+    var ra=a.rt_overall||99999; var rb=b.rt_overall||99999;
     return ra-rb;
   });
-  var goodSites=sites.filter(function(s){return s.uptime_day>=100;});
-  var faultSites=sites.filter(function(s){return s.uptime_day<100;});
+  // 故障站点
+  var faultSites = sites.filter(function(s){return s.uptime_day<100;});
+
+  function card(s){
+    var isFault = s.uptime_day<100;
+    var border = isFault ? "#e53e3e" : "#38a169";
+    var rtColor = s.rt_overall>2000 ? "#e6a23c" : "#666";
+    var rtWeight = s.rt_overall>2000 ? "bold" : "normal";
+    var rtText = s.rt_overall>0 ? s.rt_overall+" ms" : "--";
+    return '<div data-site-name="'+s.name+'" data-isFault="'+(isFault?"1":"0")+'" style="background:#fff;border-left:4px solid '+border+';padding:14px 16px;margin-bottom:8px;border-radius:0 8px 8px 0;box-shadow:0 1px 3px rgba(0,0,0,.08);">'+
+      '<a href="'+s.url+'" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;font-weight:bold;font-size:15px;display:block;margin-bottom:6px;">'+s.name+'</a>'+
+      '<div style="font-size:13px;color:#666;margin-bottom:2px;">可用率: '+s.uptime_overall.toFixed(2)+'%</div>'+
+      '<div style="font-size:13px;color:'+rtColor+';font-weight:'+rtWeight+';">平均响应: '+rtText+'</div></div>';
+  }
 
   var html='<div style="max-width:800px;margin:0 auto;padding:16px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;">';
   html+='<header style="margin-bottom:20px;"><h1 style="font-size:24px;font-weight:bold;color:#1a202c;margin:0 0 4px;">追剧监控 <span style="font-size:18px;font-weight:normal;color:#4a5568;">网站可用性状态</span></h1><p style="font-size:14px;color:#718096;margin:0;">每4小时自动探测，站点掉线自动提醒。</p></header>';
+  
+  // 工具栏
   html+='<div style="position:sticky;top:0;z-index:100;background:#fff;padding:10px 12px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1);display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:16px;">';
   html+='<input id="__search__" type="text" placeholder="搜索站点..." style="flex:1;min-width:120px;padding:8px 12px;border:1px solid #ddd;border-radius:8px;font-size:14px;outline:none;" />';
   html+='<label style="font-size:13px;white-space:nowrap;display:flex;align-items:center;gap:4px;cursor:pointer;"><input type="checkbox" id="__faultonly__" style="cursor:pointer;">只看故障</label>';
   html+='<button id="__dark__" style="padding:8px 14px;border:1px solid #ddd;border-radius:8px;background:#fff;cursor:pointer;font-size:13px;">暗色</button></div>';
 
-  if(faultSites.length>0){
-    html+='<h2 style="font-size:20px;font-weight:bold;color:#1a202c;margin:20px 0 12px;">活跃事件（'+faultSites.length+'个站点故障）</h2>';
-    for(var i=0;i<faultSites.length;i++){
-      var s=faultSites[i];
-      html+='<div data-site-name="'+s.name+'" data-isFault="1" style="background:#fff;border-left:4px solid #e53e3e;padding:14px 16px;margin-bottom:8px;border-radius:0 8px 8px 0;box-shadow:0 1px 3px rgba(0,0,0,.08);">';
-      html+='<a href="'+s.url+'" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;font-weight:bold;font-size:15px;display:block;margin-bottom:6px;">'+s.name+'</a>';
-      html+='<div style="font-size:13px;color:#666;margin-bottom:2px;">可用率: '+s.uptime_overall.toFixed(2)+'%</div>';
-      html+='<div style="font-size:13px;color:'+(s.rt_overall>2000?"#e6a23c":"#666")+';font-weight:'+(s.rt_overall>2000?"bold":"normal")+';">平均响应: '+(s.rt_overall||'--')+' ms</div></div>';
-    }
-  }
-
-  html+='<h2 style="font-size:20px;font-weight:bold;color:#1a202c;margin:24px 0 12px;">实时状态（'+goodSites.length+'个正常）</h2>';
+  // 实时状态（正常站点）在上面
+  html+='<h2 style="font-size:20px;font-weight:bold;color:#1a202c;margin:0 0 12px;">实时状态（'+goodSites.length+'个正常）</h2>';
   var third=Math.ceil(goodSites.length/3);
   for(var g=0;g<3;g++){
-    var start=g*third;
-    var end=Math.min(start+third,goodSites.length);
+    var start=g*third; var end=Math.min(start+third,goodSites.length);
     if(start>=goodSites.length)break;
     html+='<div style="font-size:16px;font-weight:bold;margin:16px 0 8px;padding:6px 12px;background:#3b82f6;color:#fff;border-radius:6px;">第 '+(g+1)+' 组</div>';
-    for(var i=start;i<end;i++){
-      var s=goodSites[i];
-      html+='<div data-site-name="'+s.name+'" data-isFault="0" style="background:#fff;border-left:4px solid #38a169;padding:14px 16px;margin-bottom:8px;border-radius:0 8px 8px 0;box-shadow:0 1px 3px rgba(0,0,0,.08);">';
-      html+='<a href="'+s.url+'" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;font-weight:bold;font-size:15px;display:block;margin-bottom:6px;">'+s.name+'</a>';
-      html+='<div style="font-size:13px;color:#666;margin-bottom:2px;">可用率: '+s.uptime_overall.toFixed(2)+'%</div>';
-      html+='<div style="font-size:13px;color:'+(s.rt_overall>2000?"#e6a23c":"#666")+';font-weight:'+(s.rt_overall>2000?"bold":"normal")+';">平均响应: '+(s.rt_overall||'--')+' ms</div></div>';
-    }
+    for(var i=start;i<end;i++) html+=card(goodSites[i]);
   }
+
+  // 活跃事件（故障站点）在下面
+  if(faultSites.length>0){
+    html+='<h2 style="font-size:20px;font-weight:bold;color:#e53e3e;margin:28px 0 12px;">活跃事件（'+faultSites.length+'个站点故障）</h2>';
+    for(var i=0;i<faultSites.length;i++) html+=card(faultSites[i]);
+  }
+
   html+='<p style="text-align:center;font-size:12px;color:#a0aec0;margin-top:32px;">本页基于 Upptime 开源项目构建</p></div>';
 
   document.body.innerHTML=html;
   document.body.style.background="#f7fafc";
-  myRendered=true;
 
   document.getElementById("__search__").oninput=function(){
     var q=this.value.trim().toLowerCase();
     var cards=document.querySelectorAll("[data-site-name]");
-    for(var i=0;i<cards.length;i++){cards[i].style.display=(!q||cards[i].dataset.siteName.toLowerCase().indexOf(q)!==-1)?"":"none";}
+    for(var i=0;i<cards.length;i++) cards[i].style.display=(!q||cards[i].dataset.siteName.toLowerCase().indexOf(q)!==-1)?"":"none";
   };
   document.getElementById("__faultonly__").onchange=function(){
     var showFault=this.checked;
     var cards=document.querySelectorAll("[data-site-name]");
-    for(var i=0;i<cards.length;i++){cards[i].style.display=(showFault&&cards[i].dataset.isFault!=="1")?"none":"";}
+    for(var i=0;i<cards.length;i++) cards[i].style.display=(showFault&&cards[i].dataset.isFault!=="1")?"none":"";
   };
   document.getElementById("__dark__").onclick=function(){document.body.classList.toggle("dark-mode");};
 }
@@ -76,16 +79,11 @@ function loadData(){
     });
 }
 
-// 关键：持续监控，如果 Sapper 覆盖了我们的内容就重新渲染
-function protect(){
-  if(sessionStorage.getItem("authed")==="1" && myData && myRendered){
-    // 检查我们的内容是否还在
-    if(!document.getElementById("__search__")){
-      renderPage(myData);
-    }
+setInterval(function(){
+  if(sessionStorage.getItem("authed")==="1" && myData && !document.getElementById("__search__")){
+    renderPage(myData);
   }
-}
-setInterval(protect, 500);
+}, 500);
 
 var darkCss=document.createElement("style");
 darkCss.textContent=".dark-mode{filter:invert(1) hue-rotate(180deg);}.dark-mode img,.dark-mode canvas,.dark-mode svg{filter:invert(1) hue-rotate(180deg);}";
@@ -110,8 +108,7 @@ function showGate(){
   inp.focus();
   function ok(){
     var pw=inp.value;
-    var enc=new TextEncoder();
-    crypto.subtle.importKey("raw",enc.encode(pw),{name:"PBKDF2"},false,["deriveBits"])
+    crypto.subtle.importKey("raw",new TextEncoder().encode(pw),{name:"PBKDF2"},false,["deriveBits"])
       .then(function(km){
         var salt=Uint8Array.from(atob("x/cY1/bAkKKTJaOXTChMmQ=="),function(c){return c.charCodeAt(0);});
         return crypto.subtle.deriveBits({name:"PBKDF2",salt:salt,iterations:100000,hash:"SHA-256"},km,256);
@@ -120,9 +117,7 @@ function showGate(){
         var hash=btoa(String.fromCharCode.apply(null,new Uint8Array(bits)));
         if(GOODHASHES.indexOf(hash)!==-1){
           sessionStorage.setItem("authed","1");
-          g.remove();
-          document.body.style.overflow="";
-          loadData();
+          g.remove(); document.body.style.overflow=""; loadData();
         }else{err.style.display="block";inp.value="";inp.focus();}
       });
   }
